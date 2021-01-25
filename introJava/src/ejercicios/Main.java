@@ -37,13 +37,31 @@ public class Main {
 
     }
 
+    public static boolean esPrimo(int num) {
+        boolean resultado = true;
+        int contador = 2;
+
+        while ((resultado) && contador != num){
+            if (num % contador == 0){
+                resultado = false;
+                System.out.println(resultado);
+                return resultado;
+            }
+            contador++;
+        }
+        System.out.println(resultado);
+        return  resultado;
+
+    }
+
     public static void main(String [] args){
         //Ejercicio 1:
        //numerosPares();
 
        // Ejercicio 2
-        multiplo();
-
+       // multiplo();
+        // Ejercicio 3
+        //esPrimo(4);
     }
 
 
