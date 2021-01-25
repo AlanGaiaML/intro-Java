@@ -41,6 +41,7 @@ public class Main {
         boolean resultado = true;
         int contador = 2;
 
+
         while ((resultado) && contador != num){
             if (num % contador == 0){
                 resultado = false;
@@ -49,19 +50,39 @@ public class Main {
             }
             contador++;
         }
-        System.out.println(resultado);
         return  resultado;
 
     }
 
+    public static void losPrimerosPrimos(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Cuantos numeros primos queres ver");
+        int num = scanner.nextInt();
+        int contador = 0;
+
+        for (int i = 2; contador < num ; i++) {
+            if (esPrimo(i) == true) {
+                System.out.println(i);
+                contador++;
+            }
+        }
+        scanner.close();
+    }
+
     public static void main(String [] args){
         //Ejercicio 1:
-       //numerosPares();
+        // numerosPares();
 
-       // Ejercicio 2
-       // multiplo();
+        // Ejercicio 2
+        // multiplo();
+
         // Ejercicio 3
-        //esPrimo(4);
+        // esPrimo();
+
+        // Ejercicio 4
+         losPrimerosPrimos();
+
     }
 
 
